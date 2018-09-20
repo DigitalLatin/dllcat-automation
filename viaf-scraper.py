@@ -19,7 +19,7 @@ import csv, codecs, requests, time, re
 from bs4 import BeautifulSoup
 
 # Open the source file to get the VIAF ID's.
-file = codecs.open('../editors/editors-2018-08-25.csv','r',encoding='utf-8')
+file = codecs.open('../editors/Editors-To-Add-2018-09-09.csv','r',encoding='utf-8')
 data = csv.reader(file,delimiter=',')
 
 # Make a list of VIAF ID's
@@ -31,7 +31,7 @@ for row in data:
 
 #del VIAF_URLS[0]
 # Create or open the file for storing the data.
-with codecs.open('../editors/editors-output-2018-08-25.csv','a',encoding='utf-8') as f:
+with codecs.open('../editors/editors-output-2018-09-11.csv','a',encoding='utf-8') as f:
     w = csv.writer(f)
     # Write the header row for the output file, using the existing VIAF ID as the key.
     w.writerow(['Key','Authorized Name','Author Name English',
